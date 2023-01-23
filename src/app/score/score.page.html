@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" (click)="homePage()" style="cursor: pointer;">
+      <ion-icon style="margin-left: 5px;" size="large" name="arrow-back-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title style="font-weight: bold;" position="center">Score Apps</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-text color="secondary" class="ion-text-center">
+        <h1 class="ion-2x">{{ no }}</h1>
+        <ion-button color="success" (click)="up()" expand="block">Up</ion-button>
+        <ion-button color="warning" (click)="down()" expand="block">Down</ion-button>
+        <ion-button color="danger" (click)="reset()" expand="block">Reset</ion-button>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card-content>
+    <ion-button color="tertiary" (click)="homePage()" expand="block" style="text-transform: lowercase;">/Home
+    </ion-button>
+
+
+
+
+  </ion-card-content>
+</ion-content>

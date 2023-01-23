@@ -1,0 +1,144 @@
+<ion-header>
+  <ion-toolbar color="white">
+    <ion-buttons slot="start">
+    <ion-menu-button autoHide="false"></ion-menu-button>
+  </ion-buttons>
+
+  <ion-buttons slot="primary">
+    <ion-button (click)="clickedStar()">
+      <ion-icon slot="icon-only" name="people"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+    <ion-title position="center" style="text-align: center;">Galeri Gambar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+  <ion-row>
+    <ion-col size="6">
+    <ion-chip>
+  <ion-avatar>
+    <ion-icon style="transform: scale(1.5); margin-left: 8px; margin-top: 5px; font-weight: bold;" name="star"></ion-icon>
+  </ion-avatar>
+  <ion-label>Favorit</ion-label>
+</ion-chip>
+    </ion-col>
+    <ion-chip>
+  <ion-avatar>
+    <ion-icon style="transform: scale(1.5); margin-left: 8px; margin-top: 5px;" name="accessibility-outline"></ion-icon>
+  </ion-avatar>
+  <ion-label>Utilitas</ion-label>
+</ion-chip>
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col size="6">
+    <ion-chip>
+  <ion-avatar>
+    <ion-icon style="transform: scale(1.5); margin-left: 8px; margin-top: 5px;" name="archive"></ion-icon>
+  </ion-avatar>
+  <ion-label>Arsip</ion-label>
+</ion-chip>
+    </ion-col>
+    <ion-chip>
+  <ion-avatar>
+    <ion-icon style="transform: scale(1.5); margin-left: 8px; margin-top: 5px;" name="trash"></ion-icon>
+  </ion-avatar>
+  <ion-label>Sampah</ion-label>
+</ion-chip>
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col size="6">
+      <ion-card>
+    <ion-avatar>
+  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+</ion-avatar>
+</ion-card>
+<ion-card-subtitle style="margin-left: 10px; font-weight: bolder;">Galeri 1</ion-card-subtitle>
+    </ion-col>
+
+    <ion-col size="6">
+      <ion-card>
+    <ion-avatar>
+  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+</ion-avatar>
+</ion-card>
+<ion-card-subtitle style="margin-left: 10px; font-weight: bolder;">Galeri 2</ion-card-subtitle>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col size="6">
+      <ion-card>
+    <ion-avatar>
+  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+</ion-avatar>
+</ion-card>
+<ion-card-subtitle style="margin-left: 10px; font-weight: bolder;">Galeri 3</ion-card-subtitle>
+    </ion-col>
+
+    <ion-col size="6">
+      <ion-card>
+    <ion-avatar>
+  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+</ion-avatar>
+</ion-card>
+<ion-card-subtitle style="margin-left: 10px; font-weight: bolder;">Galeri 4</ion-card-subtitle>
+    </ion-col>
+  </ion-row>
+
+</ion-grid>
+
+<ion-list>
+  <ion-item *ngFor="let item of items">
+    <ion-thumbnail slot="start">
+      <ion-img [src]="item.src"></ion-img>
+    </ion-thumbnail>
+    <ion-label>{{item.text}}</ion-label>
+  </ion-item>
+</ion-list>
+
+
+  <ion-tabs>
+  <!-- Tab bar -->
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="schedule">
+      <ion-icon name="image"></ion-icon>
+      <ion-label>Foto</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="speakers">
+      <ion-icon name="search"></ion-icon>
+      <ion-label>Telusuri</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="map">
+      <ion-icon color="primary" name="list"></ion-icon>
+      <ion-label color="primary" style="font-weight: bold;">Galeri</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
